@@ -17,7 +17,7 @@ public class EjemplosDeStreams {
         //ejemplo1Stream(list);
         
         //ejemplo2Clasico(list);
-        ejemplo2Stream(list);
+        //ejemplo2Stream(list);
         
     }
     

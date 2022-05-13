@@ -8,6 +8,17 @@ import personas.Person;
 public class EjemplosConGenerics {
 
     public static void main(String[] args) {
+        
+        Caja<String, Integer> caja1 = new Caja("elefantes", 20);
+
+        String contenidoCaja1 = caja1.getContenido();
+
+        Caja<Person, Integer> caja2 = new Caja(new Person("Antonio", 20, Gender.MALE), 23);
+
+        Person p = caja2.getContenido();
+        
+        
+        
         MiLista<String> milista = new MiLista<>();
         milista.miAdd("hola");
         System.out.println(milista.miGet(0));
@@ -16,16 +27,8 @@ public class EjemplosConGenerics {
         milista2.miAdd(new Person("Antonio", 20, Gender.MALE));
         System.out.println(milista2.miGet(0).toString());
 
-        Caja<String, Integer> caja1 = new Caja("elefantes", 20);
-
-        String contenidoCaja1 = caja1.getContenido();
-
-        Caja<Person, Integer> caja2 = new Caja(new Person("Antonio", 20, Gender.MALE), 23);
-
-        Person p = caja2.getContenido();
-
-        // Hacer un MiListaDeCajas con personas
-
+        
+        
         MiLista<Caja<Person, Integer>> miListaNueva = new MiLista<>();
 
         miListaNueva.miAdd(new Caja(new Person("Antonio", 20, Gender.MALE), 23));
@@ -48,30 +51,11 @@ public class EjemplosConGenerics {
         miListaNueva3.miIterar();
         
         
-        List<String> listaString1 = new ArrayList<>();
-        List<String> listaString2 = new ArrayList<>();
-        
-        List<Integer> listaInteger = new ArrayList<>();
-        
-        copiarListas(listaString1,listaString2);
-        copiarListas(listaString1,listaInteger);
-        
-        getPrimerValor(listaString1);
-        getPrimerValor(listaInteger);
-    }
-    
-    public static <T> void copiarListas(List<T> destino, List<T> source) {
-        for (T t : source) {
-            destino.add(t);
-        }
-    }
-    public static <T> T getPrimerValor(List<T> lista) {
-        return lista.get(0);
     }
     
     
 }
-
+//TODO borrar solucion para rama alumno
 class MiLista<T> {
 
     List<T> lista = new ArrayList<>();
@@ -89,6 +73,7 @@ class MiLista<T> {
             System.out.println(obj);
         }
         // lista.forEach(x -> x.toString());
+        // lista.forEach(System.out::println);
     }
 
 
@@ -119,6 +104,11 @@ class Caja<T, U extends Number> {
 }
 
 /*
- * class MiListaDeCajas { MiLista Caja //metodo añadir caja a mi lista //meotodo iterar sobre la lista y devolver el
- * contenido de cada caja }
+Respuesta correcta por consola al ejecutar:
+Caja [contenido=Person [name=Antonio, age=20, gender=MALE, sueldo=0, altura=0, trabajo=null], peso=23]
+Caja [contenido=Person [name=Antonio, age=20, gender=MALE, sueldo=0, altura=0, trabajo=null], peso=23]
+Caja [contenido=unString, peso=23]
+Caja [contenido=otroString, peso=23]
+Caja [contenido=java.lang.Object@xxxxx, peso=23]
+Caja [contenido=java.lang.Object@xxxxx, peso=23]
  */
