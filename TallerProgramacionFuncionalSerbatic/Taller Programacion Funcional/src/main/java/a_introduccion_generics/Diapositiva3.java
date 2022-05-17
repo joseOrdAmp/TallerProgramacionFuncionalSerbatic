@@ -8,18 +8,15 @@ public class Diapositiva3 {
     
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-//        ArrayList names = new ArrayList();
-//        names.add("marty");
-//        names.add("antonio");
-//        
-//        String n = (String)names.get(0);
-//        
-//        
-//        //Long l = (Long)names.get(0);//Exception
+        ArrayList names = new ArrayList();
+        names.add("marty");
+        names.add("antonio");
+        
+        String n = (String)names.get(0);
         
         
-        LocalDateTime p = LocalDateTime.now().plusDays(1).plusHours(3);
-        System.out.println(p);
-        System.out.println(LocalDateTime.now());
+        //Long l = (Long)names.get(0);//Exception
+        
+        
     }
 }
