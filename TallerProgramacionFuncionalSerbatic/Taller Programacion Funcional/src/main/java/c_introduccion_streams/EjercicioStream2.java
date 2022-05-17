@@ -7,6 +7,9 @@ import personas.Person;
 public class EjercicioStream2 {
     
     public static void main(String[] args) {
+        
+        
+        //Esta sin terminar esta parte
         List<Fichero> listaNombresFicheros = new ArrayList<>();
         listaNombresFicheros.add(new Fichero("fichero_1645461645.txt",1111,new Person("jose",34,Gender.MALE)));
         listaNombresFicheros.add(new Fichero("fichero_1045441572.txt",7894,new Person("juan",22,Gender.MALE)));

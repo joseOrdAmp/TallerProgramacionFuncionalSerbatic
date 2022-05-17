@@ -52,29 +52,15 @@ class MyMath {
     }
     
     public Predicate<Integer> isOdd() {
-        return (x -> (x % 2) != 0);
+        //Responder aqui con return (lambda);
     }
 
     public Predicate<Integer> isPalindrome() {
-        return (x -> {
-            String s = String.valueOf(x);
-            for (int i = 0; (s.length() / 2) > i; i++) {
-                if (s.charAt(i) != s.charAt(s.length() - 1 - i))
-                    return false;
-            }
-            return true;
-        });
+      //Responder aqui con return (lambda);
     }
 
     public Predicate<Integer> isPrime() {
-        return (x -> {
-            for (double i = 1; x / 2 > i; i++) {
-                if ((x / i) % 2 == 0) {
-                    return false;
-                }
-            }
-            return true;
-        });
+      //Responder aqui con return (lambda);
     }
 }
     
