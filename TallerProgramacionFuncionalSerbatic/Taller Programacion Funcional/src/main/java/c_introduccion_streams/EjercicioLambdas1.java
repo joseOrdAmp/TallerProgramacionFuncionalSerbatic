@@ -8,6 +8,8 @@ import java.util.function.Predicate;
 
 
 
+//Ejercicio de: https://www.hackerrank.com/challenges/java-lambda-expressions/problem?h_r=internal-search
+
 public class EjercicioLambdas1 {
 
     public static void main(String[] args) throws IOException {
